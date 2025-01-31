@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask API with Twilio and Stripe</title>
+</head>
+<body>
+    <h1>Sign Up and Make a Payment</h1>
+
+    <h2>Sign Up Form</h2>
+    <form action="/" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="phone">Phone:</label><br>
+        <input type="text" id="phone" name="phone" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <h2>Make a Payment</h2>
+    <form action="/payment" method="POST">
+        <label for="user_id">User ID:</label><br>
+        <input type="text" id="user_id" name="user_id" required><br><br>
+
+        <label for="amount">Amount (USD):</label><br>
+        <input type="text" id="amount" name="amount" required><br><br>
+
+        <label for="payment_method_id">Payment Method ID:</label><br>
+        <input type="text" id="payment_method_id" name="payment_method_id" required><br><br>
+        
+        <button type="submit">Pay Now</button>
+    </form>
+</body>
+</html>

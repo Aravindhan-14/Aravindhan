@@ -1,0 +1,6 @@
+conn = sqlite3.connect('app.db')
+c = conn.cursor()
+c.execute("SELECT * FROM users")
+rows = c.fetchall()
+print(rows)  # Output all rows in the users table
+conn.close()
